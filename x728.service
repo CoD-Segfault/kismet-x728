@@ -1,0 +1,6 @@
+[Unit]
+Description=Monitors x728 and shuts down Pi
+
+[Service]
+Type=simple
+ExecStart=python /opt/kismet-x728/x728.py

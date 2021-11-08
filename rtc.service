@@ -1,0 +1,7 @@
+[Unit]
+Description=Registers RTC and sets time from it.
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/kismet-x728/rtc.sh
