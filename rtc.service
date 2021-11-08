@@ -5,3 +5,6 @@ Description=Registers RTC and sets time from it.
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/opt/kismet-x728/rtc.sh
+
+[Install]
+WantedBy=multi-user.target

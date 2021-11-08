@@ -18,7 +18,7 @@ wget -O - https://re4son-kernel.com/keys/http/archive-key.asc | apt-key add -
 apt update
 apt dist-upgrade -y
 apt install -y kalipi-kernel kalipi-bootloader kalipi-re4son-firmware \
-    kismet gpsd gpsd-clients ntp 
+    kismet gpsd gpsd-clients ntp python-smbus python-requests
 
 # Add pi user to kismet group
 usermod -a -G kismet pi

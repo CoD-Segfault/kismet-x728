@@ -3,4 +3,8 @@ Description=Monitors x728 and shuts down Pi
 
 [Service]
 Type=simple
+User=pi
 ExecStart=python /opt/kismet-x728/x728.py
+
+[Install]
+WantedBy=multi-user.target
