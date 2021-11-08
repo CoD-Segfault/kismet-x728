@@ -40,7 +40,7 @@ echo "gps=gpsd:host=localhost,port=2947" >> /etc/kismet/kismet_site.conf
 raspi-config nonint do_i2c 0
 
 # Enable RTC
-echo rtc-ds1307 >> /etc/modprobe.d/rtc.conf
+echo "install rtc-ds1307" >> /etc/modprobe.d/rtc.conf
 cp rtc.service /lib/systemd/system/
 systemctl daemon-reload
 systemctl enable rtc
