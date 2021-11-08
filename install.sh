@@ -24,7 +24,7 @@ apt install -y kalipi-kernel kalipi-bootloader kalipi-re4son-firmware \
 usermod -a -G kismet pi
 
 # change kismet service to use pi user and enable it
-sed -i 's/root/pi' /lib/systemd/system/kismet.service
+sed -i 's/root/pi/' /lib/systemd/system/kismet.service
 systemctl daemon-reload
 systemctl enable kismet
 
@@ -37,7 +37,7 @@ echo "log_prefix=/home/pi/kismetlogs" >> /etc/kismet/kismet_site.conf
 echo "gps=gpsd:host=localhost,port=2947" >> /etc/kismet/kismet_site.conf 
 
 # Enable i2c
-raspi-config nonint go_i2c 0
+raspi-config nonint do_i2c 0
 
 # Enable RTC
 echo rtc-ds1307 >> /etc/modprobe.d/rtc.conf
